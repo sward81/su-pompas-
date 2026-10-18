@@ -75,37 +75,37 @@
     <infoTrigger triggerNode="infoTrigger" />
 
     <productionPoint>
-        <productions sharedThroughputCapacity="false">
-            <production id="water1" name="$l10n_fillType_B1"  cyclesPerHour="1" costsPerActiveHour="20">
+        <productions sharedThroughputCapacity="true">
+            <production id="water1" name="$l10n_fillType_B1"  cyclesPerHour="5" costsPerActiveHour="0" autoOff="false">
                 <inputs>
-					<input fillType="DIESEL" amount="1"/>
+					<!-- <input fillType="DIESEL" amount="1"/> -->
 				</inputs>
 				<outputs>
-					<output fillType="WATER" amount="15000"/>
+					<output fillType="WATER" amount="5000"/>
 				</outputs>
             </production>
 
-            <production id="water2" name="$l10n_fillType_B2"  cyclesPerHour="1" costsPerActiveHour="20">
+            <production id="water2" name="$l10n_fillType_B2"  cyclesPerHour="5" costsPerActiveHour="0" autoOff="false">
                 <inputs>
-					<input fillType="DIESEL" amount="1"/>
+				<!--	<input fillType="DIESEL" amount="1"/> -->
 				</inputs>
 				<outputs>
-					<output fillType="WATER" amount="15000"/>
+					<output fillType="WATER" amount="5000"/>
 				</outputs>
             </production>
 
-            <production id="water3" name="$l10n_fillType_B3"  cyclesPerHour="1" costsPerActiveHour="20">
+            <production id="water3" name="$l10n_fillType_B3"  cyclesPerHour="5" costsPerActiveHour="0" autoOff="false">
                 <inputs>
-					<input fillType="DIESEL" amount="1"/>
+				<!--	<input fillType="DIESEL" amount="1"/> -->
 				</inputs>
 				<outputs>
-					<output fillType="WATER" amount="1500000"/>
+					<output fillType="WATER" amount="5000"/>
 				</outputs>
             </production>
         </productions>
 
         <storage isExtension="false" fillLevelSyncThreshold="50" >
-            <capacity fillType="DIESEL"       	capacity="1000" />
+            <!--<capacity fillType="DIESEL"       	capacity="1000" /> -->
             <capacity fillType="WATER"     	capacity="10000000" />
 			<startFillLevel fillType="DIESEL" fillLevel="50"/>
         </storage>
