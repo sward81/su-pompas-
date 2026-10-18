@@ -75,40 +75,25 @@
     <infoTrigger triggerNode="infoTrigger" />
 
     <productionPoint>
-        <productions sharedThroughputCapacity="true">
-            <production id="water1" name="$l10n_fillType_B1"  cyclesPerHour="5" costsPerActiveHour="0" autoOff="false">
-                <inputs>
-					<!-- <input fillType="DIESEL" amount="1"/> -->
-				</inputs>
-				<outputs>
-					<output fillType="WATER" amount="5000"/>
-				</outputs>
-            </production>
+        <!-- ÜRETİM AYARLARI -->
+    <productions sharedThroughputCapacity="true">
+        <!-- Saatte 12 kez döngü yapar (Her 5 dakikada bir). İsletim maliyeti 0 TL. -->
+        <production id="water_pump_production" name="Su Pompasi Uretimi" cyclesPerHour="12" costsPerActiveHour="0" autoOff="false">
+            <inputs>
+                <!-- Dizel veya baska girdi istemedigi icin bu blok tamamen bos birakildi -->
+            </inputs>
+            <outputs>
+                <!-- Her döngüde 2500 litre, yani saatte tam 30.000 LİTRE bedava su üretir! -->
+                <output fillType="WATER" amount="2500" />
+            </outputs>
+        </production>
+    </productions>
 
-            <production id="water2" name="$l10n_fillType_B2"  cyclesPerHour="5" costsPerActiveHour="0" autoOff="false">
-                <inputs>
-				<!--	<input fillType="DIESEL" amount="1"/> -->
-				</inputs>
-				<outputs>
-					<output fillType="WATER" amount="5000"/>
-				</outputs>
-            </production>
-
-            <production id="water3" name="$l10n_fillType_B3"  cyclesPerHour="5" costsPerActiveHour="0" autoOff="false">
-                <inputs>
-				<!--	<input fillType="DIESEL" amount="1"/> -->
-				</inputs>
-				<outputs>
-					<output fillType="WATER" amount="5000"/>
-				</outputs>
-            </production>
-        </productions>
-
-        <storage isExtension="false" fillLevelSyncThreshold="50" >
-            <!--<capacity fillType="DIESEL"       	capacity="1000" /> -->
-            <capacity fillType="WATER"     	capacity="10000000" />
-			<startFillLevel fillType="DIESEL" fillLevel="50"/>
-        </storage>
+    <!-- DEPOLAMA KAPASİTESİ: Tesisin kendi deposunda tutabilecegi maksimum miktar -->
+    <storage isExtension="false" fillLevelSyncThreshold="50">
+        <!-- Depo kapasitesi tam 1.000.000 litre su olarak ayarlandi -->
+        <capacity fillType="WATER" capacity="1000000"/>
+    </storage>
 
         <effectNodes>
         </effectNodes>
