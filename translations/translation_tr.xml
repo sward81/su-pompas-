@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+	<texts>
+		<text name="function_SMBNFM" text="A groundwater pump that uses diesel-powered pumps to extract and supply water."/>
+		<text name="fillType_B1" text="Water pump 1"/>
+		<text name="fillType_B2" text="Water pump 2"/>
+		<text name="fillType_B2" text="Water pump 3"/>
+	</texts>
+</l10n>
+

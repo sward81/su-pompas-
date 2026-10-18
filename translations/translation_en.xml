@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+	<texts>
+		<text name="function_SMBNFM" text="Suyu çekmek ve dağıtmak için dizel motorlu pompalar kullanan bir yeraltı suyu pompası."/>
+		<text name="fillType_B1" text="Su pompası 1"/>
+		<text name="fillType_B2" text="Su pompası 2"/>
+		<text name="fillType_B2" text="Su pompası 3"/>
+	</texts>
+</l10n>
+
